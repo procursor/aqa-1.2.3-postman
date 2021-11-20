@@ -6,4 +6,5 @@ stack: JDK 11
 build_script:
   - sh: >-
       chmod +x  ./gradlew;
+
       ./gradlew test --info;
