@@ -1,0 +1,9 @@
+version: 1.0.{build}
+
+image: Ubuntu
+stack: JDK 11
+
+build_script:
+  - sh: >-
+      chmod +x  ./gradlew
+      ./gradlew test --info
