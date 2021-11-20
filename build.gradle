@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.rest-assured:rest-assured:4.3.0'
+    testImplementation 'io.rest-assured:json-schema-validator:4.3.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
+    // https://mvnrepository.com/artifact/org.json/json
+    testImplementation 'org.json:json:20210307'
+
+}
+
+dependencies {
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
