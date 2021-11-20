@@ -11,7 +11,7 @@ import org.json.JSONObject;
 class PostmanTest {
 
     @Test
-    void shouldReturn201OnPost() {
+    void shouldReturn200AndEchoRequestPayloadOnPost() {
         var key = "msg";
         var value = "Привет REST!";
         var requestBody = new JSONObject();
@@ -31,7 +31,7 @@ class PostmanTest {
                 .log()
                     .ifValidationFails()
                 .assertThat()
-                    .statusCode(201)
+                    .statusCode(200)
                         .and()
                     .body("data." + key, is(equalTo(value)))
         ;
