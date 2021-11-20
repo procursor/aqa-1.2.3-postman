@@ -33,7 +33,7 @@ class PostmanTest {
                 .assertThat()
                     .statusCode(200)
                         .and()
-                    .body("data." + key, is(equalTo(value)))
+                    .body("data." + key, is(equalTo("Привет REST")))
         ;
     }
 }
